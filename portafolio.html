@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="portafolio_css.css">
+</head>
+<body>
+
+<!--sidebar top-->  
+    <div class="sidebar">
+        <div class="top">
+            <div class="logo">
+                <i class='bx bxs-user'></i>
+                <span>Portfolio</span>
+            </div> 
+            <i class="bx bx-menu" id="btn"></i>
+        </div>
+
+        <div class="user">
+            <img src="C:\Users\Usuario\Documents\html\Images\profile-pic-sqr.jpg" alt="me" class="user-img">
+            <div>
+                <p class="bold">Juan Pablo Cruz</p>
+            </div>
+        </div>
+
+<!--sidebar link buttons-->
+        <ul>
+            <li>
+                <a href="#">
+                    <i class='bx bx-home'></i>
+                    <span class="nav-item">Home</span>
+                </a>         
+            </li>
+            <li>
+                <a href="#">
+                    <i class="bx bxs-file-pdf"></i>
+                    <span class="nav-item">Curriculum</span>
+                </a> 
+            </li>
+            <li>
+                <a href="#">
+                    <i class="bx bxs-briefcase"></i>
+                    <span class="nav-item">Proyects</span>
+                </a>                
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bxl-figma'></i>
+                    <span class="nav-item">Designs</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-envelope'></i>
+                    <span class="nav-item">Contact</span>
+                </a>    
+            </li>
+        </ul>
+    </div>
+
+<!--main section-->
+    <div id="toggle-target" class="main-content">
+        
+<!--top menu-->
+        <div class="top-menu">
+            <button class="button darkbtn" id="toggle-button">
+                <i class='bx bxs-sun bx-tada icon-large' style='color:#dab700'></i>
+            </button>
+        </div>
+<!--main content-->
+        <div class="container">
+            <div class="top-cont">
+                <h1>Hola, soy Juan Pablo Rodríguez Licenciado en Informática</h1>
+                <img src="C:\Users\Usuario\Documents\html\Images\profile-pic-home.jpg" alt="home-pic" class="home-img">
+            </div>       
+        </div>
+        <p class="bottom-cont">En Construcción</p>
+    </div>
+
+<script src="portafolio_js.js"></script>
+</body>
+</html>
