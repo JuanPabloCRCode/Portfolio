@@ -1,0 +1,259 @@
+/*body*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'lato', sans-serif;
+}
+
+/*my profile image*/
+.user-img {
+  width: 50px;
+  border-radius: 100%;
+  border: 1px solid white;
+}
+
+/*sidebar first look*/
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 80px;
+  background-color: rgb(0, 0, 0);
+  padding: 0.4rem 0.9rem;
+  transition: all 0.5s ease;
+}
+
+/*sidebar when expanded*/
+.sidebar.active ~ .main-content {
+  left: 250px;
+  width: calc(100% - 250px);
+  transition: left 0.5s ease, width 0.5 ease;
+}
+
+/*sidebar when exapended while in darkmode*/
+.sidebar.active ~ .dark-mode {
+  left: 250px;
+  width: calc(100% - 250px);
+  transition: all 0.5s ease;
+}
+
+/*sidebar width when active*/
+.sidebar.active {
+  width: 250px;
+}
+/*
+/*sidebar's buttons*/
+.sidebar #btn {
+  position: absolute;
+  color: white;
+  top: .4rem;
+  left: 50%;
+  font-size: 1.2rem;
+  line-height: 50px;
+  transform: translate(-50%);
+  cursor: pointer;
+}
+
+/*sidebar icon transition*/
+.sidebar.active #btn {
+  left: 90%;
+}
+
+/*sidebar top logo*/
+.sidebar .top .logo {
+  color: white;
+  display: flex;
+  height: 50px;
+  width: 100%;
+  align-items: center;
+  pointer-events: none;
+  opacity: 0;
+}
+
+/*show sidebar top logo when active*/
+.sidebar.active .top .logo {
+  opacity: 1;
+  
+}
+
+/*sidebar top logo size and position*/
+.top .logo i {
+  font-size: 2rem;
+  margin-right: 5px;
+}
+
+/*image and name*/
+.user {
+  display: flex;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.user p {
+  color: white;
+  opacity: 1;
+  margin-left: 1rem;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.sidebar p {
+  opacity: 0;
+}
+
+.sidebar.active p {
+  opacity: 1;
+}
+
+/*sidebar menu options*/
+.sidebar ul li {
+  position: relative;
+  list-style-type: none;
+  height: 50px;
+  width: 90%;
+  margin: 0.8rem auto;
+  line-height: 50px;
+}
+
+.sidebar ul li a {
+  color: white;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  border-radius: 0.8rem;
+}
+
+.sidebar ul li a:hover {
+  background-color: white;
+  color: black;
+}
+
+.sidebar ul li a i {
+  min-width: 50px;
+  text-align: center;
+  height: 50px;
+  border-radius: 12px;
+  line-height: 50px;
+}
+
+/*sidebar menu options text visability*/
+.sidebar .nav-item {
+  opacity: 0;
+}
+
+.sidebar.active .nav-item {
+  opacity: 1;
+}
+
+/*icon logo alignment*/
+i {
+  padding-right: 4px;
+}
+
+/*main content behaviour*/
+.main-content {
+  position: relative;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  min-height: 100vh;
+  top: 0;
+  left: 80px;
+  width: calc(100% - 80px);
+  padding: 1rem;
+  transition: left 0.5s ease, width 0.5s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+/*main content behaviour while in darkmode*/
+.dark-mode {
+  background-color: rgb(40, 40, 40);
+  color: white;
+  position: relative;
+  min-height: 100vh;
+  top: 0;
+  left: 80px;
+  width: calc(100% - 80px);
+  padding: 1rem;
+  transition: left 0.5s ease, width 0.5s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+/*top menu fixed items*/
+.top-menu {
+  position: fixed;
+  right: 10px; /* Distance from the right edge */
+  top: 5px;   /* Distance from the top edge */
+}
+
+/*darkmode button*/
+.button {
+  border-radius: 50px;
+  padding: 3px 3px;
+  font-size: 16px;
+  margin: 6px 2px;
+  cursor: pointer;
+  height: 33px;
+  align-items: center;
+  width: 34px;
+}
+
+.darkbtn {
+  background-color: rgb(255, 255, 255);
+  border: 2px solid rgb(0, 0, 0);
+  box-shadow: 1px 2px 2px 1px rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.icon-large {
+  font-size: 24px;
+}
+
+/* Removes underline */
+a {
+  text-decoration: none; 
+}
+
+/* Documents */
+.document-container {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  background-color: white;
+}
+
+.document-container:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.document-img img{
+  width: 100px;
+  height: auto;
+  margin-right: 15px;
+  border-radius: 5px;
+  transition: transform 0.6s ease;
+}
+
+.document-container:hover .document-img img {
+  transform: scale(1.1);
+}
+
+.document-info {
+  flex: 1;
+}
+
+.document-title {
+  margin: 0;
+  font-size: 1.2em;
+}
+
+.document-description {
+  margin: 5px 0 0;
+  color: #555;
+}
