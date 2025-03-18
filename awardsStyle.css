@@ -248,7 +248,7 @@ h1 {
 }
 
 .document-img img{
-  width: 100px;
+  width:80px;
   height: auto;
   margin-right: 15px;
   border-radius: 5px;
@@ -265,10 +265,11 @@ h1 {
 
 .document-title {
   margin: 0;
-  font-size: 1.2em;
+  font-size: 1em;
 }
 
 .document-description {
   margin: 5px 0 0;
+  font-size: 0.8em;
   color: #555;
 }
