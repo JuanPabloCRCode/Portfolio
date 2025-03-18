@@ -6,6 +6,11 @@
   font-family: 'lato', sans-serif;
 }
 
+/*placed for anchors to jump smoothly*/
+html {
+  scroll-behavior: smooth;
+}
+
 /*my profile image*/
 .user-img {
   width: 50px;
@@ -209,6 +214,10 @@ i {
   font-size: 24px;
 }
 
+.mainSection {
+  height: 100vh;
+}
+
 /* Removes underline */
 a {
   text-decoration: none; 
@@ -272,4 +281,26 @@ h1 {
   margin: 5px 0 0;
   font-size: 0.8em;
   color: #555;
+}
+
+.anchors {
+  position: fixed; /* Fix the position so it stays in place while scrolling */
+  top: 50%; /* Position vertically in the middle */
+  right: 20px; /* Position on the far right */
+  transform: translateY(-50%); /* Adjust for exact vertical centering */
+  display: flex;
+  flex-direction: column; /* Stack links vertically */
+  gap: 10px; /* Space between links */
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.anchors a {
+  text-decoration: none;
+  color: blue;
+  font-size: 16px;
+}
+
+.anchors a:hover {
+  text-decoration: underline;
 }
